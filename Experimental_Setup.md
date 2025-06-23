@@ -14,3 +14,9 @@
 
 
 *Fig : ExperimentalSetup*
+
+## 🔧Non-Linearity for Practical Condition
+In practical condition the possible error sources are added and it is simulated in LTSPICE
+![image](https://github.com/user-attachments/assets/49db629b-100d-45d1-813c-826a89f724ff)
+
+*Fig : Variable resistance Vs measured resistance is plotted for practical condition*
