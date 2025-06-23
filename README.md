@@ -40,7 +40,8 @@ Traditional respiratory monitoring often involves **invasive procedures** or **b
 
 ### 📐 System Architecture
 
-![Circuit Diagram](https://via.placeholder.com/600x300?text=Circuit+Diagram+Fig.1)  
+![image](https://github.com/user-attachments/assets/c1929a66-4e65-4383-baf7-337d74cc4e77)
+
 *Fig 1: Digital measurement system circuit*
 
 ### 🔄 Operational Phases
