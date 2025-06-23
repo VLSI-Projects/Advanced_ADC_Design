@@ -1,12 +1,7 @@
 # Digital Measurement System for Non-Invasive Piezoresistive Breath Sensor
 
-![Banner](https://via.placeholder.com/800x200?text=Digital+Breath+Sensor+Monitoring+System)
 
-> A low-cost, non-invasive respiratory monitoring solution for point-of-care applications  
-> Developed at Kerala University of Digital Sciences, Innovation and Technology  
-> © 2024 Anex K Paul, P K Adithya Das, Megha R
 
----
 
 ## 📌 Abstract
 
@@ -103,3 +98,10 @@ Traditional respiratory monitoring often involves **invasive procedures** or **b
 # Resistance Measurement Correlation
 ideal_R = [323, 324, 325, 326, 327, 328, 329, 330]
 measured_R = [322.8, 323.9, 325.1, 326.0, 327.2, 328.1, 329.0, 330.0]
+
+> A low-cost, non-invasive respiratory monitoring solution for point-of-care applications  
+> Developed at Kerala University of Digital Sciences, Innovation and Technology  
+> © P K Adithya Das
+
+---
+
