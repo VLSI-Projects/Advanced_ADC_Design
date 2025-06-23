@@ -138,6 +138,6 @@ This project demonstrates a **functional digital measurement system** that:
 ---
 
 > 🏫 Developed at Kerala University of Digital Sciences  
-> © 2024 Anex K Paul, P K Adithya Das, Megha R | Project Repository
+> © 2024 P K Adithya Das| Project Repository
 ---
 
