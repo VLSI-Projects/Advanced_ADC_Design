@@ -86,7 +86,8 @@ Traditional respiratory monitoring often involves **invasive procedures** or **b
 
 ### ✅ Ideal Conditions (LTspice)
 
-![image](https://github.com/user-attachments/assets/7ed5cbdf-48f5-4960-85ef-35058219125e)
+![image](https://github.com/user-attachments/assets/b9953fc5-631b-4133-ad85-65ad2e1dab66)
+
 
 
 - Maximum nonlinearity: **0.09%**
@@ -95,7 +96,7 @@ Traditional respiratory monitoring often involves **invasive procedures** or **b
 # Resistance Measurement Correlation
 ideal_R = [323, 324, 325, 326, 327, 328, 329, 330]
 measured_R = [322.8, 323.9, 325.1, 326.0, 327.2, 328.1, 329.0, 330.0]
-
+```
 ## ✅ Conclusion
 
 This project demonstrates a **functional digital measurement system** that:
