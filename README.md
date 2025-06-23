@@ -44,46 +44,41 @@ Traditional respiratory monitoring often involves **invasive procedures** or **b
 
 *Fig 1: Digital measurement system circuit*
 
-### 🔄 Operational Phases
+## 🔄 Key Operational Phases
 
-#### ➤ Signal Acquisition:
-- Sensor Rx (323Ω–330Ω) detects breath-induced strain
-- Amplifier boosts signal:
-  \[
-  V_o = \left(1 + \frac{R_2}{R_x}\right) \cdot V_{in}
-  \]
+1. **Signal Acquisition**:
+   - Piezoresistive sensor (`Rx = 323Ω–330Ω`) detects breath-induced strain
+   - Non-inverting amplifier boosts signal  
+     _Gain = 1 + R2 / Rx_
 
-#### ➤ Integration & Timing:
-- **Ton Phase (V1 = HIGH):**
-  - Integrator charges C1 (100nF)
-  \[
-  V_i(T_{on}) = \left(\frac{V_o}{RC}\right)T_1 + V_i(0)
-  \]
+2. **Integration & Timing**:
 
-- **Toff Phase (V1 = LOW):**
-  - Integrator discharges via Vref
-  \[
-  V_i(T_{on} + T_{off}) = \left(-\frac{V_r}{RC}\right)T_2 + V_i(0)
-  \]
+   - **Ton Phase (V1 = HIGH)**:
+     - Integrator charges capacitor `C1 (100nF)`
+     - Output:  
+       `Vi(Ton) = (Vo / RC) · T1 + Vi(0)`
 
-#### ➤ Digital Conversion:
-\[
-\frac{T_2}{T_1} = 1 + \frac{R_2}{R_1} \Rightarrow R_1 = R_2\left(\frac{T_1}{T_2 - T_1}\right)
-\]
+   - **Toff Phase (V1 = LOW)**:
+     - Integrator discharges through reference voltage
+     - Output:  
+       `Vi(Ton + Toff) = (-Vr / RC) · T2 + Vi(0)`
 
-- NE555 timer generates digital pulses proportional to resistance
+3. **Digital Conversion**:
+   - Relationship:  
+     `T2 / T1 = 1 + R2 / R1 → R1 = R2 · (T1 / (T2 − T1))`
+   - NE555 timer generates digital output pulses proportional to resistance
 
 ---
 
 ## 🔧 Circuit Design
 
-| **Component** | **Value/Range**         | **Quantity** |
+| **Component** | **Value/Range**          | **Quantity** |
 |---------------|--------------------------|--------------|
-| OP07 (Op-amp) | ±5V                     | 3            |
+| OP07 (Op-amp) | ±5V                      | 3            |
 | Resistor Rx   | 323Ω–330Ω (1Ω steps)     | 1            |
-| Resistor R1   | 330Ω                    | 1            |
-| Capacitor C1  | 100nF                   | 1            |
-| Reference V   | 1.2V                    | 1            |
+| Resistor R1   | 330Ω                     | 1            |
+| Capacitor C1  | 100nF                    | 1            |
+| Reference V   | 1.2V                     | 1            |
 
 ---
 
@@ -91,7 +86,8 @@ Traditional respiratory monitoring often involves **invasive procedures** or **b
 
 ### ✅ Ideal Conditions (LTspice)
 
-![LTspice Ideal](https://via.placeholder.com/400x200?text=Fig+3+%26+4+-+LTspice+Results)
+![image](https://github.com/user-attachments/assets/7ed5cbdf-48f5-4960-85ef-35058219125e)
+
 
 - Maximum nonlinearity: **0.09%**
 
@@ -100,9 +96,47 @@ Traditional respiratory monitoring often involves **invasive procedures** or **b
 ideal_R = [323, 324, 325, 326, 327, 328, 329, 330]
 measured_R = [322.8, 323.9, 325.1, 326.0, 327.2, 328.1, 329.0, 330.0]
 
-> A low-cost, non-invasive respiratory monitoring solution for point-of-care applications  
-> Developed at Kerala University of Digital Sciences, Innovation and Technology  
-> © P K Adithya Das
+## ✅ Conclusion
 
+This project demonstrates a **functional digital measurement system** that:
+
+- ✅ Provides accurate respiratory monitoring (**≤2.1% error**)
+- 💡 Reduces cost through **single-reference-voltage** design
+- 🩺 Enables **non-invasive point-of-care diagnostics**
+- ⚡ Processes data in **real-time for immediate intervention**
+
+> The system outperforms traditional methods in **comfort**, **accessibility**, and **affordability**, while maintaining **clinical-grade precision**.
+
+---
+
+## 🚀 Future Work
+
+### 🔌 Microcontroller Integration
+- Add Arduino for direct digital measurements
+
+### 📏 Miniaturization
+- Develop a custom ASIC consolidating all components
+
+### 📡 Wireless Connectivity
+- Bluetooth / LoRaWAN for remote monitoring
+
+### 🧪 Clinical Validation
+- Large-scale trials across diverse patient groups
+
+### 🌡️ Multi-Sensor Expansion
+- Integrate temperature and humidity sensors
+
+---
+
+## 📚 References
+
+1. Elangovan K. et al. — _Digital Signal-Conditioner for Resistive Sensors_, IEEE SAS 2020  
+2. Priya P. et al. — _Noninvasive Piezoresistive Breath Sensor_, IEEE Sensors Journal 2023  
+3. Ferrari V. et al. — _Oscillator-based Signal Conditioning_, IMTC Proceedings 1997  
+
+---
+
+> 🏫 Developed at Kerala University of Digital Sciences  
+> © 2024 Anex K Paul, P K Adithya Das, Megha R | Project Repository
 ---
 
