@@ -42,7 +42,7 @@ Traditional respiratory monitoring often involves **invasive procedures** or **b
 
 ![image](https://github.com/user-attachments/assets/c1929a66-4e65-4383-baf7-337d74cc4e77)
 
-*Fig 1: Digital measurement system circuit*
+*Fig : Digital measurement system circuit*
 
 ## 🔄 Key Operational Phases
 
@@ -70,17 +70,6 @@ Traditional respiratory monitoring often involves **invasive procedures** or **b
 
 ---
 
-## 🔧 Circuit Design
-
-| **Component** | **Value/Range**          | **Quantity** |
-|---------------|--------------------------|--------------|
-| OP07 (Op-amp) | ±5V                      | 3            |
-| Resistor Rx   | 323Ω–330Ω (1Ω steps)     | 1            |
-| Resistor R1   | 330Ω                     | 1            |
-| Capacitor C1  | 100nF                    | 1            |
-| Reference V   | 1.2V                     | 1            |
-
----
 
 ## 📊 Simulation Results
 
